@@ -24,3 +24,6 @@
 .idea
 /public/packs
 /node_modules
+
+# Ignore encrypted secrets key file.
+config/secrets.yml.key

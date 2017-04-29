@@ -2,14 +2,18 @@
 * `rails new --webpack=react`
 * `yarn` as package manager
 * compile js with webpack (gem `webpacker`) `./bin/webpack-dev-server`
-* system tests 
+* system tests with built-in Capybara
   * <https://github.com/rails/rails/blob/658b5244356feba2b262e87d8b333c5a46999a5d/actionpack/lib/action_dispatch/system_test_case.rb#L11>
   * <http://guides.rubyonrails.org/testing.html#system-testing>
+* encrypted secrets
 
 # To remember
 * use yarn as a js package manager (it uses npm registry <https://www.sitepoint.com/yarn-vs-npm>)
 * place react components `app/javascript/component_name` and `require('component_name'')` in js pack
 * by default system tests are not run by `test` command, you need to use `bin/rails test:system`
+* `bin/rails secrets:setup` to setup encrypted secrets (keep secrets.yml.key)
+* `EDITOR="vi" bin/rails secrets:edit` to edit secrets - there are stored 
+in encrypted secrets.yml.enc file (checked into repo)
 
 # TO-DO
 * play with `foreman` <https://ddollar.github.io/foreman/>
