@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 1
-  title: MyString
-  description: MyText
+  assignee_id: 1
+  title: Issue 1 title
+  description: Issue 1 desc
 
 two:
-  type: 1
-  title: MyString
-  description: MyText
+  assignee_id: 1
+  title: Issue 2 title
+  description: Issue 2 desc

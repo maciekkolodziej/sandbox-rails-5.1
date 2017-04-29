@@ -2,7 +2,8 @@ require 'test_helper'
 
 class IssuesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @issue = issues(:one)
+    @user = FactoryGirl.create(:user)
+    @issue = FactoryGirl.create(:issue, assignee_id: @user.id)
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class IssuesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create issue" do
     assert_difference('Issue.count') do
-      post issues_url, params: { issue: { description: @issue.description, title: @issue.title, type: @issue.type } }
+      post issues_url, params: { issue: { description: @issue.description, title: @issue.title, assignee_id: @user.id } }
     end
 
     assert_redirected_to issue_url(Issue.last)
@@ -34,7 +35,7 @@ class IssuesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update issue" do
-    patch issue_url(@issue), params: { issue: { description: @issue.description, title: @issue.title, type: @issue.type } }
+    patch issue_url(@issue), params: { issue: { description: @issue.description, title: @issue.title, assignee_id: @user.id } }
     assert_redirected_to issue_url(@issue)
   end
 
