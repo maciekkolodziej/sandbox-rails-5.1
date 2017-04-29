@@ -1,24 +1,11 @@
-# README
+# Wath's new
+* `rails new --webpack=react`
+* `yarn` as package manager
+* compile js with webpack (gem `webpacker`) `./bin/webpack-dev-server`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# To remember
+* use yarn as a js package manager (it uses npm registry <https://www.sitepoint.com/yarn-vs-npm>)
+* place react components `app/javascript/component_name` and `require('component_name'')` in js pack
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# TO-DO
+* play with `foreman` <https://ddollar.github.io/foreman/>

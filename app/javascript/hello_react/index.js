@@ -2,14 +2,14 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 const Hello = props => (
-  <div>Hello {props.name}!</div>
+<h1>Hello {props.name}!</h1>
 )
-
 Hello.defaultProps = {
   name: 'David'
 }
@@ -19,8 +19,11 @@ Hello.propTypes = {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('render react app')
   ReactDOM.render(
     <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
+    document.body.insertBefore(document.createElement('div'), document.body.firstChild),
   )
 })
+
+console.log('hello_react loaded')
